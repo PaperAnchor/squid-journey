@@ -1,0 +1,321 @@
+@import "bootstrap";
+
+/* ====================== Main Reset Code ===================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ====================== Default Styles ===================== */
+
+h1 {
+	font-family: 'Bree Serif', serif;
+	font-size: 3em;
+	color: #66ada3;
+	margin-top: 100px;
+}
+
+.blog-contact-content h1 {
+	font-family: 'Bree Serif', serif;
+	font-size: 3em;
+	color: #66ada3;
+	margin-top: 30px;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 1.4em;
+	margin-top: 20px;
+}
+
+p {
+font-family: 'Raleway', sans-serif;
+	font-size: 1.4em;
+	font-weight: 200;
+	line-height: 1.4em;
+	margin-top: 20px;
+}
+
+
+/* ====================== Nav Styles ===================== */
+
+.navbar-default {
+	background-color: transparent;
+	border: none;
+}
+
+.navbar-nav  li {
+	margin-right: 36px;
+}
+
+.navbar-nav  li.blog-icon{
+	margin-right: 0;
+}
+
+.navbar-default .navbar-nav  li  a {
+	color: #253331;
+}
+
+.navbar-default .navbar-nav  li  a:hover {
+	color: #66ada3;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #66ada3;
+	background-color: transparent;
+}
+
+#blog-main-nav-wrapper {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Bree Serif', serif;
+	font-size: 1.2em;
+}
+
+#blog-main-nav-wrapper .navbar {
+	height: 100px;
+	margin-bottom: 0;
+}
+
+#blog-main-nav-wrapper .navbar .nav{
+	margin-top: 25px;
+}
+
+.navbar-nav  a {
+	color: #253331;
+}
+
+
+
+/* ====================== Body Styles ===================== */
+
+#blog-main-content-bg {
+	width: 100%;
+	height: 450px;
+	background-image: url('blog-main-bg.jpg');
+	background-color: none;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.blog-main-content-wrapper {
+	max-width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.blog-squid-container {
+	margin-top: -90px;
+	text-align: center;
+}
+
+.blog-squid {
+	animation-duration: 1.5s;
+	animation-name: bounce;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@-webkit-keyframes bounce {
+	0% {-webkit-transform: translateY(-5px);}
+	100% {-webkit-transform: translateY(-20px);}
+}
+@keyframes bounce {
+	0% {transform: translateY(-5px);}
+	100% {transform: translateY(-20px);}
+}
+
+.blog-main-content {
+	background-color: transparent;
+	overflow: hidden;
+}
+
+/* ====================== Modal Styles ===================== */
+
+.modal {
+	text-align: center;
+	padding: 0!important;
+}
+
+.modal:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -4px;
+}
+
+.modal-dialog {
+	margin: 0 auto;
+	width: 660px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.modal-header {
+	border: none;
+	text-align: center;
+	padding-bottom: 0px;
+	background-color: #87d4cb;
+}
+
+.modal-title {
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.modal-body {
+	font-family: 'Raleway', sans-serif;
+	color: #5b8b86;
+	background-color: #87d4cb;
+	padding: 0 25px 35px 25px;
+}
+
+.modal-body p {
+	font-size: 1.35em;
+	line-height: 1.6em;
+	margin: 0 55px;
+	text-align: center;
+}
+
+.blog-login-form {
+	width: 80%;
+	margin: 35px auto 0 auto;
+}
+
+.blog-login-form label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.blog-login-form input {
+	background-color: #70b9b0;
+	color: #fff;
+	border: medium none;
+	border-radius: 5px;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	line-height: normal;
+}
+
+.blog-login-submit {
+	width: 40%;
+	height: 50px;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	background-color: #87d4cb;
+	border: none;
+	border-radius: 5px;
+	margin: 10px 0 10px 70px;
+	float: left;
+}
+
+.blog-forgot-password  a {
+	color: #5b8b86;
+	font-family: 'Raleway', sans-serif;
+	float: right;
+	width: 45%;
+	height: 50px;
+	padding: 25px 0 0 25px;
+	text-align: left;
+}
+
+.modal-footer {
+	background-color: #ececec;
+	border: none;
+}
+
+.modal-content  {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.contact-form-wrapper {
+	margin-top: 25px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.contact-form-wrapper label {
+	font-weight: 600;
+	padding-bottom: 11px;
+}
+
+.contact-form-wrapper input {
+	height: 45px;
+	border: none;
+	background-color: #a9c8c5;
+	color: #fff;
+}
+
+.contact-form-wrapper textarea {
+	border: none;
+	background-color: #a9c8c5;
+	color: #fff;
+	resize: none;
+}
+
+.contact-form-left,
+.contact-form-right {
+	padding-left: 0;
+}
+
+.blog-contact-submit {
+	height: 50px;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	background-color: #87d4cb;
+	border: none;
+	border-radius: 5px;
+	width: 50%;
+	margin-top: 15px;
+	float: right;
+}
