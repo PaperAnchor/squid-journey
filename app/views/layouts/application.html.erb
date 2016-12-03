@@ -44,10 +44,10 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#" id="blog-home">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#" id="blog-about">About</a></li>
-                        <li><a href="#" >Blog</a></li>
-                        <li><a href="#" id="blog-contact">Contact</a></li>
+                        <li><%= link_to "Home", '#', id:"blog-home" %></a></li>
+                        <li><%= link_to "About", "#about", id: "blog-about" %></li>
+                        <li><%= link_to "Blog", "#blog", id: "blog-entries" %></li>
+                        <li><%= link_to "Contact", "#contact", id: "blog-contact" %></li>
                         <li class="blog-icon"><a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li class="blog-icon"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li class="blog-icon"><a href="http://www.github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
@@ -57,89 +57,13 @@
             </nav>
         </div><!-- Closes the Outer Navigation Div -->
 
-        <div id="blog-main-content-bg">
-            <div class="container blog-main-content-wrapper">
-                <div class="col-md-4 blog-squid-container">
-                    <!-- Trigger login with the squid -->
-                    <a data-toggle="modal" data-target="#myModal"><%=image_tag("blog-squid-lrg.png", alt: 'Squid', class: 'blog-squid') %></a>
-                    <%=image_tag("blog-squid-shadow.png", alt: 'Shadow', class: 'blog-squid-shadow') %>
-                </div>
 
-                <div class="col-md-8 blog-main-content">
-                    <div class="blog-home-content">
-                        <h1>Hello There!</h1>
-                        <h2>My Name is Zach.<br>
-                        I am a Designer & Developer.</h2>
-                        <p>This site is where I document my journey and growth in this ever changing industry. Feel free to come along!</p>
-                    </div>
-                    <div class="blog-about-content">
-                        <h1>About Me</h1>
-                        <p>This is some text that I will write about me!</p>
-                    </div>
-                    <div class="blog-contact-content">
-                        <h1>Say Hello!</h1>
-                        <p>Words of Encouragement? Just want to say hey. I love hearing from<br>people! Feel free to send me a message!</p>
-                        <form class="contact-form-wrapper">
-                            <div class="contact-form-left col-md-6">
-                                <div class="form-group"> <!-- Email field -->
-                                    <label class="control-label" for="name">Your Name</label>
-                                    <input class="form-control" id="blog-form-name" name="name" type="text"/>
-                                </div>
-
-                                <div class="form-group"> <!-- Subject field -->
-                                    <label class="control-label " for="email">Your Email</label>
-                                    <input class="form-control" id="blog-form-email" name="email" type="text"/>
-                                </div>
-                            </div>
-
-                            <div class="contact-form-right col-md-6">
-                                <div class="form-group"> <!-- Message field -->
-                                    <label class="control-label " for="message">Your Message</label>
-                                    <textarea class="form-control" cols="40" id="blog-form-message" name="message" rows="6"></textarea>
-                                    <input class="blog-contact-submit" type="submit" value="Send">
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h1 class="modal-title">Is That You Zach?</h1>
-                </div>
-                <div class="modal-body">
-                    <p>If not, you won’t find much here... Do you want<br>to post blogs for him?</p>
-                    <form class="blog-login-form" action="action_page.php">
-                    <label>Username</label><br>
-                    <input type="text" name="username" value="">
-                    <br>
-                    <label>Password</label><br>
-                    <input type="password" name="password" value="">
-                </div>
-                <div class="modal-footer">
-                    <input class="blog-login-submit" type="submit" value="Sign In">
-                    <span class="blog-forgot-password"><a href="#">I Forgot! <i class="fa fa-arrow-right" aria-hidden="true"></a></i></span>
-                    </form>
-                </div>
-            </div>
-
-          </div>
-        </div>
+        <%= yield %>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-
-        <%= yield %>
 
 </body>
 </html>
