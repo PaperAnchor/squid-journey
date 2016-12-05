@@ -1,4 +1,4 @@
-$(document).on('page:change', function() { //Added page:change to prevent breakage of anchor links when coming back to home page
+/*$(document).on('page:change', function() { //Added page:change to prevent breakage of anchor links when coming back to home page
 
         $('.blog-about-content').hide();
         $('.blog-contact-content').hide();
@@ -11,14 +11,6 @@ $(document).on('page:change', function() { //Added page:change to prevent breaka
                 $('.blog-home-content').delay(500).fadeIn(500);
                 $('.blog-squid-container').delay(500).fadeIn(500);
                 $('.blog-about-content').fadeOut(500);
-                $('.blog-contact-content').fadeOut(500);
-                $('.blog-entries-content').fadeOut(500);
-        });
-
-        $('#blog-about').click(function(){
-                $('.blog-about-content').delay(500).fadeIn(500);
-                $('.blog-squid-container').delay(500).fadeIn(500);
-                $('.blog-home-content').fadeOut(500);
                 $('.blog-contact-content').fadeOut(500);
                 $('.blog-entries-content').fadeOut(500);
         });
@@ -39,4 +31,4 @@ $(document).on('page:change', function() { //Added page:change to prevent breaka
                 $('.blog-squid-container').fadeOut(500);
         });
 
-});
+}); */

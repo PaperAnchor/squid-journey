@@ -1,36 +1,70 @@
 @import 'normalize';
 @import 'bootstrap';
 
+$dark-blue: #123035;
+$medium-blue: #55a1b1;
+$light-blue: #7fc0d1;
+
 /* ====================== Default Styles ===================== */
 
+body {
+	color: $dark-blue;
+}
+
 h1 {
-	font-family: 'Bree Serif', serif;
-	font-size: 3em;
-	color: #66ada3;
+	font-family: 'Serenity', serif;
+	font-size: 3.5em;
+	font-weight: 700;
+	color: $medium-blue;
 	margin-top: 100px;
+	text-transform: uppercase;
 }
 
 .blog-contact-content h1 {
-	font-family: 'Bree Serif', serif;
-	font-size: 3em;
-	color: #66ada3;
 	margin-top: 30px;
 }
 
+.blog-entries-content h1 {
+	margin-top: 50px;
+}
+
 h2 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 2em;
+	font-family: 'Serenity', sans-serif;
+	color: $dark-blue;
+	text-align: center;
+	font-size: 3.5em;
+	font-weight: 600;
+	line-height: 1.2em;
+	margin-top: 0;
+}
+
+h3 {
+	font-family: 'Serenity', sans-serif;
+	font-size: 2.5em;
 	font-weight: 300;
-	line-height: 1.4em;
-	margin-top: 20px;
+	line-height: 1.2em;
+	margin: 25px 0;
+}
+
+h5 {
+	font-family: 'Serenity', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	color: $dark-blue;
+	padding: 10% 25px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 p {
-font-family: 'Raleway', sans-serif;
-	font-size: 1.4em;
+	font-family: 'Serenity', sans-serif;
+	font-size: 1.7em;
 	font-weight: 200;
+}
+
+.blog-home-content p {
 	line-height: 1.4em;
-	margin-top: 20px;
+	padding-right: 200px;
 }
 
 .hide {
@@ -54,17 +88,17 @@ font-family: 'Raleway', sans-serif;
 }
 
 .navbar-default .navbar-nav  li  a {
-	color: #253331;
+	color: $dark-blue;
 }
 
 .navbar-default .navbar-nav  li  a:hover {
-	color: #66ada3;
+	color: $light-blue;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-	color: #66ada3;
+	color: $light-blue;
 	background-color: transparent;
 }
 
@@ -72,8 +106,8 @@ font-family: 'Raleway', sans-serif;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: 'Bree Serif', serif;
-	font-size: 1.2em;
+	font-family: 'Serenity', serif;
+	font-size: 1.3em;
 }
 
 #blog-main-nav-wrapper .navbar {
@@ -93,10 +127,11 @@ font-family: 'Raleway', sans-serif;
 
 /* ====================== Body Styles ===================== */
 
-#blog-main-content-bg {
+.blog-main-content-bg {
 	width: 100%;
 	height: 450px;
 	background-image: url('blog-main-bg.jpg');
+	background-position: fixed;
 	background-color: #f8f8f8;
 	border-top: 1px solid #ebebeb;
 	border-bottom: 1px solid #ebebeb;
@@ -114,6 +149,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .blog-squid {
+	max-height: 550px;
 	animation-duration: 1.5s;
 	animation-name: bounce;
 	animation-timing-function: ease;
@@ -137,8 +173,33 @@ font-family: 'Raleway', sans-serif;
 
 /* ====================== Blog Entry Styles ===================== */
 
-.blog-entries-content{
+.blog-preview-wrapper {
+	margin-top: 50px;
 	text-align: center;
+}
+
+.blog-title-preview {
+	height: 80px;
+	margin-top:90px;
+	background-color: rgba(127, 192, 209, 0.7);
+}
+
+.blog-entry-preview {
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	height: 265px;
+	padding: 0px;
+	box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.1), 0 6px 16px 0 rgba(0, 0, 0, 0.13);
+}
+
+.blog-entry-preview a {
+	color: $dark-blue;
+}
+
+.blog-entry-preview-date {
+	text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
 /* ====================== Modal Styles ===================== */
@@ -166,8 +227,9 @@ font-family: 'Raleway', sans-serif;
 .modal-header {
 	border: none;
 	text-align: center;
-	padding-bottom: 0px;
-	background-color: #87d4cb;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: $medium-blue;
 }
 
 .modal-title {
@@ -177,8 +239,8 @@ font-family: 'Raleway', sans-serif;
 
 .modal-body {
 	font-family: 'Raleway', sans-serif;
-	color: #5b8b86;
-	background-color: #87d4cb;
+	color: $dark-blue;
+	background-color: $light-blue;
 	padding: 0 25px 35px 25px;
 }
 
@@ -200,7 +262,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .blog-login-form input {
-	background-color: #70b9b0;
+	background-color: $medium-blue;
 	color: #fff;
 	border: medium none;
 	border-radius: 5px;
@@ -216,7 +278,7 @@ font-family: 'Raleway', sans-serif;
 	height: 50px;
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
-	background-color: #87d4cb;
+	background-color: $light-blue;
 	border: none;
 	border-radius: 5px;
 	margin: 10px 0 10px 70px;
@@ -224,7 +286,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .blog-forgot-password  a {
-	color: #5b8b86;
+	color: $medium-blue;
 	font-family: 'Raleway', sans-serif;
 	float: right;
 	width: 45%;
@@ -245,7 +307,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .contact-form-wrapper {
-	margin-top: 25px;
+	margin-top: 100px;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -257,13 +319,13 @@ font-family: 'Raleway', sans-serif;
 .contact-form-wrapper input {
 	height: 45px;
 	border: none;
-	background-color: #a9c8c5;
+	background-color: $light-blue;
 	color: #fff;
 }
 
 .contact-form-wrapper textarea {
 	border: none;
-	background-color: #a9c8c5;
+	background-color: $light-blue;
 	color: #fff;
 	resize: none;
 }
@@ -277,7 +339,7 @@ font-family: 'Raleway', sans-serif;
 	height: 50px;
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
-	background-color: #87d4cb;
+	background-color: $medium-blue;
 	border: none;
 	border-radius: 5px;
 	width: 50%;
