@@ -1,7 +1,4 @@
 <div class="container-fluid blog-main-content-bg">
-
-    <!--- ======================Intro Section======================== -->
-
     <div class="row blog-main-content-wrapper">
         <div class="col-md-4 blog-squid-container">
             <!-- Trigger login with the squid -->
@@ -19,53 +16,6 @@
         </div>
     </div>
 
-    <!--- ======================Blog Entries Section======================== -->
-
-    <div class="row">
-        <h2>The Blog</h2>
-        <div class="col-md-10 col-md-offset-1 blog-preview-wrapper">
-            <% @posts.each do |post| %>
-                <div class="col-md-3">
-                    <div class="col-md-10 col-md-offest-1 blog-entry-preview">
-                        <div class="blog-title-preview">
-                            <h5><%= link_to post.title, post %></h5>
-                        </div>
-                        <p class="blog-entry-preview-date"><%= post.created_at.strftime("%A, %b, %d")%></p>
-                    </div>
-                </div>
-            <% end %>
-            <button class="blog-read-more-button">Read More Here</button>
-        </div>
-    </div>
-
-    <!--- ======================Contact Section======================== -->
-    <div class="row contact-form-wrapper">
-        <form class="col-md-6">
-            <div class="contact-form-left col-md-6">
-                <div class="form-group"> <!-- Email field -->
-                    <label class="control-label" for="name">Your Name</label>
-                    <input class="form-control" id="blog-form-name" name="name" type="text"/>
-                </div>
-
-                <div class="form-group"> <!-- Subject field -->
-                    <label class="control-label " for="email">Your Email</label>
-                    <input class="form-control" id="blog-form-email" name="email" type="text"/>
-                </div>
-            </div>
-
-            <div class="contact-form-right col-md-6">
-                <div class="form-group"> <!-- Message field -->
-                    <label class="control-label " for="message">Your Message</label>
-                    <textarea class="form-control" cols="40" id="blog-form-message" name="message" rows="6"></textarea>
-                    <input class="blog-contact-submit" type="submit" value="Send">
-                </div>
-            </div>
-        </form>
-        <div class="col-md-6 blog-contact-content">
-            <h2>Say Hello!</h2>
-            <p>Words of Encouragement? Just want to say hey. I love hearing from<br>people! Feel free to send me a message!</p>
-        </div>
-    </div>
     <!--- ======================Modal Section======================== -->
 
     <div id="myModal" class="modal">
@@ -95,4 +45,57 @@
         </div>
     </div>
 
+    <!--- ======================Blog Entries Section======================== -->
+
+    <div class="row">
+        <h2>The Blog</h2>
+        <div class="col-md-offset-1 col-md-10 blog-preview-wrapper">
+            <% @posts.each do |post| %>
+                <div class="col-md-3">
+                    <div class="col-md-offset-1 col-md-10  blog-entry-preview">
+                        <div class="blog-title-preview">
+                            <h5><%= link_to post.title, post %></h5>
+                        </div>
+                        <p class="blog-entry-preview-date"><%= post.created_at.strftime("%A, %b, %d")%></p>
+                    </div>
+                </div>
+            <% end %>
+            <button class="blog-read-more-button">Read More Here</button>
+        </div>
+    </div>
+
+    <!--- ======================Contact Section======================== -->
+    <div class="row blog-contact-background">
+        <div class="col-md-offset-1 col-md-10 blog-contact-wrapper">
+            <div class="col-md-6 col-md-push-6 blog-contact-content">
+                <h2>Say Hello!</h2>
+                <p>Words of Encouragement? Just want to say hey. I love hearing from people! Feel free to send me a message!</p>
+            </div>
+            <form class="col-md-6 col-md-pull-6">
+                    <div class="form-group"> <!-- Email field -->
+                        <label class="control-label" for="name">Your Name</label>
+                        <input class="form-control" id="blog-form-name" name="name" type="text"/>
+                    </div>
+
+                    <div class="form-group"> <!-- Subject field -->
+                        <label class="control-label " for="email">Your Email</label>
+                        <input class="form-control" id="blog-form-email" name="email" type="text"/>
+                    </div>
+
+                    <div class="form-group"> <!-- Message field -->
+                        <label class="control-label " for="message">Your Message</label>
+                        <textarea class="form-control" cols="40" id="blog-form-message" name="message" rows="6"></textarea>
+                        <input class="blog-contact-submit" type="submit" value="Send">
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <!--- ======================Footer Section======================== -->
+
+    <footer class="row">
+        <div class="col-md-offset-1 col-md-3">©Copyright 2016  |  Zach Moodie</div>
+        <div class="col-md-offset-5 col-md-2" style="text-align: right">Social Icons Here</div>
+        <div class="col-md-1"></div>
+    </footer>
 </div>

@@ -8,11 +8,11 @@ $light-blue: #7fc0d1;
 /* ====================== Default Styles ===================== */
 
 body {
+	font-family: 'Serenity', sans-serif;
 	color: $dark-blue;
 }
 
 h1 {
-	font-family: 'Serenity', serif;
 	font-size: 3.5em;
 	font-weight: 700;
 	color: $medium-blue;
@@ -29,7 +29,6 @@ h1 {
 }
 
 h2 {
-	font-family: 'Serenity', sans-serif;
 	color: $dark-blue;
 	text-align: center;
 	font-size: 3.5em;
@@ -39,7 +38,6 @@ h2 {
 }
 
 h3 {
-	font-family: 'Serenity', sans-serif;
 	font-size: 2.5em;
 	font-weight: 300;
 	line-height: 1.2em;
@@ -47,7 +45,6 @@ h3 {
 }
 
 h5 {
-	font-family: 'Serenity', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
 	color: $dark-blue;
@@ -57,7 +54,6 @@ h5 {
 }
 
 p {
-	font-family: 'Serenity', sans-serif;
 	font-size: 1.7em;
 	font-weight: 200;
 }
@@ -174,7 +170,7 @@ p {
 /* ====================== Blog Entry Styles ===================== */
 
 .blog-preview-wrapper {
-	margin-top: 50px;
+	margin-top: 70px;
 	text-align: center;
 }
 
@@ -200,6 +196,80 @@ p {
 	text-align: center;
     font-size: 16px;
     margin-top: 5px;
+}
+
+.blog-read-more-button {
+	margin-top: 80px;
+    color: #fff;
+    background-color: #55a1b1;
+    border: none;
+    border-radius: 5px;
+    font-weight: 200;
+    padding: 5px 15px;
+}
+
+/* ====================== Contact Styles ===================== */
+
+.blog-contact-background {
+	background-image: url('blog-main-bg.jpg');
+	background-position: fixed;
+	background-color: #f8f8f8;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	margin-top: 80px;
+	padding: 80px 0;
+}
+
+.blog-contact-wrapper {
+
+}
+
+.contact-form-wrapper label {
+	font-weight: 600;
+	padding-bottom: 11px;
+}
+
+.contact-form-wrapper input {
+	height: 45px;
+	border: none;
+	background-color: $light-blue;
+	color: #fff;
+}
+
+.contact-form-wrapper textarea {
+	border: none;
+	background-color: $light-blue;
+	color: #fff;
+	resize: none;
+}
+
+.contact-form-left,
+.contact-form-right {
+	padding-left: 0;
+}
+
+.blog-contact-submit {
+	height: 50px;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	background-color: $medium-blue;
+	border: none;
+	border-radius: 5px;
+	width: 50%;
+	margin-top: 15px;
+	float: right;
+}
+
+.blog-contact-content {
+	padding-left: 80px;
+}
+
+/* ====================== Footer Styles ===================== */
+
+footer {
+	height: 100px;
+	font-weight: 300;
+    padding-top: 40px;
 }
 
 /* ====================== Modal Styles ===================== */
@@ -304,45 +374,4 @@ p {
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
-}
-
-.contact-form-wrapper {
-	margin-top: 100px;
-	font-family: 'Raleway', sans-serif;
-}
-
-.contact-form-wrapper label {
-	font-weight: 600;
-	padding-bottom: 11px;
-}
-
-.contact-form-wrapper input {
-	height: 45px;
-	border: none;
-	background-color: $light-blue;
-	color: #fff;
-}
-
-.contact-form-wrapper textarea {
-	border: none;
-	background-color: $light-blue;
-	color: #fff;
-	resize: none;
-}
-
-.contact-form-left,
-.contact-form-right {
-	padding-left: 0;
-}
-
-.blog-contact-submit {
-	height: 50px;
-	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	background-color: $medium-blue;
-	border: none;
-	border-radius: 5px;
-	width: 50%;
-	margin-top: 15px;
-	float: right;
 }
