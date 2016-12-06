@@ -1,8 +1,15 @@
-<%= @post.title %><br>
-<%= @post.content %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 blog-entry-wrapper">
+            <h6 class="blog-entry-author"> By Zach Moodie</h6>
+            <h1 class="blog-entry-title"><%= @post.title %><br></h1>
+            <span class="col-md-6 blog-entry-date"><%= @post.created_at.strftime("%A, %b, %d")%></span><span class="col-md-6">Leave A Comment</span>
+            <p class="blog-entry-content"><%= @post.content %></p>
+        </div>
 
-<br>
-<br>
+    </div>
+
+</div>
 
 <%= link_to "Edit", edit_post_path(@post) %>
 <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delet this post?"} %>
