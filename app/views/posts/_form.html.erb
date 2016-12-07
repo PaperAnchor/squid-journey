@@ -1,26 +1,32 @@
 <%= form_for @post do |f| %>
+<div class="container-fluid">
+    <% if @post.errors.any? %>
+        <h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
+        <ul>
+            <% @post.errors.full_messages each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    <% end %>
+    <div class="row">
+        <div class="col-md-12">
+            <%= f.label :title %><br>
+            <%= f.text_field :title,  class: "col-md-12 blog-entry-title-field" %>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <%= f.label :content, "Write your next blog post here." %><br>
+            <%= f.text_area :content, class: "col-md-12 blog-entry-content-field" %>
+        </div>
+    </div>
 
-<% if @post.errors.any? %>
-    <h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
-    <ul>
-        <% @post.errors.full_messages each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
+    <br>
+    <br>
 
-<%= f.label :title %><br>
-<%= f.text_field :title %>
+    <%= f.submit %>
 
-<br>
-<br>
-
-<%= f.label :content, "Write your next blog post here." %><br>
-<%= f.text_area :content %>
-
-<br>
-<br>
-
-<%= f.submit %>
-
-<% end %>
+    <% end %>
+</div>
