@@ -72,22 +72,47 @@
                 <p>Words of Encouragement? Just want to say hey. I love hearing from people! Feel free to send me a message!</p>
             </div>
             <a name="contact"></a>
-            <form class="col-md-6 col-md-pull-6">
-                    <div class="form-group"> <!-- Email field -->
+            <div class="col-md-6 col-md-pull-6">
+                    <%= form_for @contact do |f| %>
+                        <%= f.label :name %><br>
+                        <%= f.text_field :name, required: true, class: 'blog-form-name' %>
+
+                        <br>
+
+                        <%= f.label :email %><br>
+                        <%= f.text_field :email, required: true, class: 'blog-form-email' %>
+
+                        <br>
+
+                        <%= f.label :message %><br>
+                        <%= f.text_field :message, as: :text, class: 'blog-form-message' %>
+
+                        <br>
+
+                        <div class="hidden">
+                            <%= f.label :nickname %><br>
+                            <%= f.text_field :nickname, hint: 'Leave this field blank' %>
+                        </div>
+
+                        <%= f.submit "Send", class: 'blog-contact-submit' %>
+
+                    <% end %>
+
+                    <!-- <div class="form-group">
                         <label class="control-label" for="name">Your Name</label>
                         <input class="form-control" id="blog-form-name" name="name" type="text"/>
                     </div>
 
-                    <div class="form-group"> <!-- Subject field -->
+                    <div class="form-group">
                         <label class="control-label " for="email">Your Email</label>
                         <input class="form-control" id="blog-form-email" name="email" type="text"/>
                     </div>
 
-                    <div class="form-group"> <!-- Message field -->
+                    <div class="form-group">
                         <label class="control-label " for="message">Your Message</label>
                         <textarea class="form-control" cols="40" id="blog-form-message" name="message" rows="6"></textarea>
                         <input class="blog-contact-submit" type="submit" value="Send">
-                    </div>
-            </form>
+                    </div>-->
+            </div>
         </div>
     </div>
