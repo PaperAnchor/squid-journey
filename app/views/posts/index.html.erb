@@ -1,1 +1,6 @@
 <h1>Hey this works!</h1>
+
+<% @posts.each do |post| %>
+    <h1><%= link_to post.title, post %></h1>
+    <p><%= post.created_at.strftime("%A, %b, %d")%></p>
+<% end %>
