@@ -28,7 +28,11 @@
         <%= csrf_meta_tags %>
 </head>
 <body>
-
+    <% if notice %>
+        <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+        <p class="alert"><%= alert %></p>
+    <% end %>
         <div id="blog-main-nav-wrapper">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -48,6 +52,9 @@
                         <li><%= link_to "Home", root_path(:anchor => "about"), id:"blog-home" %></li>
                         <li><%= link_to "Blog", root_path(:anchor => "blog"), id:"blog-entries" %></li>
                         <li><%= link_to "Contact", root_path(:anchor => "contact"), id:"blog-contact" %></li>
+                        <% if user_signed_in? %>
+                            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+                        <% end %>
                         <li class="blog-icon"><a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li class="blog-icon"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li class="blog-icon"><a href="http://www.github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
@@ -56,13 +63,6 @@
                 </div><!-- /.container-fluid -->
             </nav>
         </div><!-- Closes the Outer Navigation Div -->
-
-        <% if notice %>
-            <p class="notice"><%= notice %></p>
-        <% elsif alert %>
-            <p class="alert"><%= alert %></p>
-        <% end %>
-
 
         <%= yield %>
 

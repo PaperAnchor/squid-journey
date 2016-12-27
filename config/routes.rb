@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     get 'welcome/index' #Defines the routes
     root 'welcome#index' #Setting the welcome controller index action to the route of the application
 
-    get '*path' => redirect('/')
+    get '*path' => redirect('/') #Redirects if there are routing errors.
 end

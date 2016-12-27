@@ -76,6 +76,13 @@ p {
 	display: none;
 }
 
+.notice, .alert {
+	text-align: center;
+	padding: 20px 0;
+	background-color: $light-blue;
+	color: #fff;
+}
+
 
 /* ====================== Nav Styles ===================== */
 
@@ -240,6 +247,22 @@ p {
 .blog-entry-content-field {
     width: 100%;
     height: 200px;
+}
+
+#admin_links {
+	border-top: 1px solid $medium-blue;
+	border-bottom: 1px solid $medium-blue;
+	text-align: center;
+	padding: 1em 0;
+	margin: 3em 0;
+	a {
+		color: $medium-blue;
+		margin: 0 1em;
+		font-weight: 700;
+		font-size: 1.1em;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
 }
 
 /* ====================== Contact Styles ===================== */
