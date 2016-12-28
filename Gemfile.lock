@@ -202,7 +202,7 @@ DEPENDENCIES
   aws-sdk (~> 2.3)
   bootstrap (~> 4.0.0.alpha5)
   byebug
-  ckeditor (= 4.0.4)
+  ckeditor
   coffee-rails (~> 4.1.0)
   devise (~> 4.2)
   friendly_id (~> 5.1.0)
