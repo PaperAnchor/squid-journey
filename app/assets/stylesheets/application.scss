@@ -7,6 +7,8 @@ $medium-blue: #55a1b1;
 $light-blue: #7fc0d1;
 $lightest-blue: #c4e1e9;
 
+$light-grey: #ccc;
+
 /* ====================== Default Styles ===================== */
 
 body {
@@ -49,13 +51,13 @@ h1.blog-entry-title {
 .page-title {
     font-size: 1.5em;
     font-weight: 500;
-	color: $dark-blue;
+	color: $light-grey;
 	margin-top: 0;
     margin-bottom: 50px;
     text-align: center;
 	padding: 20px 0;
-    border-top: 1px solid $dark-blue;
-    border-bottom: 1px solid $dark-blue;
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
     text-transform: uppercase;
 }
 
