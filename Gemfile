@@ -17,7 +17,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'mail_form', '~> 1.6'
 gem 'devise', '~> 4.2'
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.6', '>= 2.6.42'
+gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk-v1'
 gem 'figaro'
 
 group :development, :test do
