@@ -18,6 +18,7 @@ class PostsController < ApplicationController
         else
             render 'new', notice: "Well, something went wrong. Try again?"
         end
+        @user = User.create( user_params )
     end
 
     def show
@@ -42,11 +43,10 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:title, :content, :slug)
+        params.require(:post).permit(:title, :content, :image, :slug)
     end
 
     def find_post
-                @post = Post.friendly.find(params[:id])
+        @post = Post.friendly.find(params[:id])
     end
-
 end

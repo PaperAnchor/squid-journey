@@ -5,12 +5,21 @@
 $dark-blue: #123035;
 $medium-blue: #55a1b1;
 $light-blue: #7fc0d1;
+$lightest-blue: #c4e1e9;
 
 /* ====================== Default Styles ===================== */
 
 body {
 	font-family: 'Serenity', sans-serif;
 	color: $dark-blue;
+}
+
+input:focus {
+    outline:none;
+}
+
+textarea:focus {
+    outline:none;
 }
 
 h1 {
@@ -35,6 +44,19 @@ h1.blog-entry-title {
 
 .blog-entries-content h1 {
 	margin-top: 50px;
+}
+
+.page-title {
+    font-size: 1.5em;
+    font-weight: 500;
+	color: $dark-blue;
+	margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+	padding: 20px 0;
+    border-top: 1px solid $dark-blue;
+    border-bottom: 1px solid $dark-blue;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -104,13 +126,15 @@ p {
 }
 
 .navbar-default .navbar-nav  li  a:hover {
-	color: $light-blue;
+	color: $medium-blue;
+	text-shadow: none;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-	color: $light-blue;
+	color: $medium-blue;
+	text-shadow: none;
 	background-color: transparent;
 }
 
@@ -214,14 +238,18 @@ p {
     margin-top: 5px;
 }
 
-.blog-read-more-button {
+.blog-read-more {
 	margin-top: 80px;
-    color: #fff;
+}
+
+a.blog-read-more-button {
+	color: #fff;
+	text-decoration: none;
     background-color: #55a1b1;
     border: none;
     border-radius: 5px;
     font-weight: 200;
-    padding: 5px 15px;
+    padding: 10px 20px;
 }
 
 .blog-entry-wrapper {
@@ -258,7 +286,7 @@ p {
 	a {
 		color: $medium-blue;
 		margin: 0 1em;
-		font-weight: 700;
+		font-weight: 300;
 		font-size: 1.1em;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -281,22 +309,28 @@ p {
 
 }
 
-.contact-form-wrapper label {
+.blog-contact-form label {
 	font-weight: 600;
-	padding-bottom: 11px;
 }
 
-.contact-form-wrapper input {
+.blog-contact-form input {
 	height: 45px;
+	width: 100%;
+	border-radius: 5px;
 	border: none;
-	background-color: $light-blue;
-	color: #fff;
+	background-color: $lightest-blue;
+	color: #000;
+	padding: 5px 10px;
+	margin-bottom: 20px;
 }
 
-.contact-form-wrapper textarea {
+.blog-contact-form textarea {
 	border: none;
-	background-color: $light-blue;
-	color: #fff;
+	width: 100%;
+	border-radius: 5px;
+	background-color: $lightest-blue;
+	color: #000;
+	padding: 5px 10px;
 	resize: none;
 }
 
@@ -308,12 +342,12 @@ p {
 .blog-contact-submit {
 	height: 50px;
 	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	background-color: $medium-blue;
+	color: #fff!important;
+	background-color: $medium-blue!important;
 	border: none;
 	border-radius: 5px;
-	width: 50%;
-	margin-top: 15px;
+	width: 50%!important;
+	margin-top: 25px;
 	float: right;
 }
 
@@ -355,8 +389,8 @@ footer {
 	border: none;
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: $medium-blue;
+	padding-bottom: 5px;
+	background-color: $light-blue;
 }
 
 .modal-title {
@@ -368,58 +402,27 @@ footer {
 	font-family: 'Raleway', sans-serif;
 	color: $dark-blue;
 	background-color: $light-blue;
-	padding: 0 25px 35px 25px;
+	padding: 0 26px 6px 26px;
+	text-align: left;
 }
 
 .modal-body p {
 	font-size: 1.35em;
 	line-height: 1.6em;
-	margin: 0 55px;
+	margin: 0 100px;
 	text-align: center;
 }
 
-.blog-login-form {
-	width: 80%;
-	margin: 35px auto 0 auto;
-}
-
-.blog-login-form label {
-	color: #fff;
-	margin-bottom: 10px;
-}
-
-.blog-login-form input {
-	background-color: $medium-blue;
-	color: #fff;
-	border: medium none;
-	border-radius: 5px;
-	height: 50px;
-	width: 100%;
-	margin-bottom: 20px;
-	padding-left: 20px;
-	line-height: normal;
-}
-
 .blog-login-submit {
-	width: 40%;
+	width: 40%!important;
 	height: 50px;
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
 	background-color: $light-blue;
 	border: none;
 	border-radius: 5px;
-	margin: 10px 0 10px 70px;
+	margin: 10px 0 10px 10px!important;
 	float: left;
-}
-
-.blog-forgot-password  a {
-	color: $medium-blue;
-	font-family: 'Raleway', sans-serif;
-	float: right;
-	width: 45%;
-	height: 50px;
-	padding: 25px 0 0 25px;
-	text-align: left;
 }
 
 .modal-footer {
@@ -431,4 +434,20 @@ footer {
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
+}
+
+.modal label {
+	color: #fff;
+	font-weight: 300;
+}
+
+.modal input {
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+	background-color: $medium-blue;
+	margin-bottom: 20px;
+	padding: 10px;
+	color: #fff;
 }
