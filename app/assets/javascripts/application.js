@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 //= require ckeditor/init
+//=addcustomjs 'ckeditor/config'
 
 $(document).ready(function(){
  $('.pelda').bind('ajax:before', function(){
