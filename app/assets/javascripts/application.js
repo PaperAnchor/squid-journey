@@ -15,3 +15,12 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+//= require ckeditor/init
+
+$(document).ready(function(){
+ $('.pelda').bind('ajax:before', function(){
+  for (instance in CKEDITOR.instances){
+   CKEDITOR.instances[instance].updateElement();
+  }
+ });
+});
