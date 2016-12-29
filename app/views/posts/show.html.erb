@@ -1,7 +1,10 @@
-<div class="container-fluid">
+<style media="screen">
+  body { background-image: url(<%= @post.image.url %>); }
+</style>
+
+<div class="container-fluid blog-entry-bg">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 blog-entry-wrapper">
-            <%= link_to image_tag(@post.image.url(:med)), @post.image.url %>
             <h6 class="blog-entry-author"> By Zach Moodie</h6>
             <h1 class="blog-entry-title"><%= @post.title %><br></h1>
             <span class="col-md-6 blog-entry-date"><%= @post.created_at.strftime("%A, %b, %d")%></span><span class="col-md-6">Leave A Comment</span>
