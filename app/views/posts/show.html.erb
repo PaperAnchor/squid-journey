@@ -9,13 +9,22 @@
             <h1 class="blog-entry-title"><%= @post.title %><br></h1>
             <span class="col-md-6 blog-entry-date"><%= @post.created_at.strftime("%A, %b, %d")%></span><span class="col-md-6">Leave A Comment</span>
             <p class="blog-entry-content"><%= markdown @post.content %></p>
-            <% if user_signed_in? %>
 
+            <div id="share_box">
+                <p>Share this post!</p>
+                <!-- Twitter -->
+                <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @zachmoodie - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter share-icon"></i></a>
+                <!-- Facebook -->
+                <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook share-icon"></i></a>
+                <!-- Google Plus -->
+                <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus share-icon"></i></a>
+            </div>
+
+            <% if user_signed_in? %>
                 <div id="admin_links">
                     <%= link_to "Edit", edit_post_path(@post) %>
                     <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delet this post?"} %>
                 </div>
-
             <% end %>
 
             <%= render 'disqus' %>

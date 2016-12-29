@@ -89,6 +89,10 @@ h5 {
 	text-transform: uppercase;
 }
 
+a:hover {
+	text-shadow: none;
+}
+
 p {
 	font-size: 1.7em;
 	font-weight: 200;
@@ -307,6 +311,30 @@ a.blog-read-more-button {
     height: 200px;
 }
 
+#share_box {
+	font-size: 0.8em;
+	text-align: center;
+	padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid $light-grey;
+}
+
+#share_box p {
+	font-weight: 600;
+}
+
+#share_box a i {
+    font-size: 1.5em;
+	margin: 0 10px;
+	color: $light-blue;
+	cursor: pointer;
+}
+
+#share_box a i:hover {
+	color: $medium-blue;
+	text-decoration: none;
+}
+
 #admin_links {
 	border-top: 1px solid $medium-blue;
 	border-bottom: 1px solid $medium-blue;
@@ -494,5 +522,5 @@ footer {
 /* ====================== Disqus Styles ===================== */
 
 #disqus_thread {
-	margin-top: 75px;
+	margin-top: 25px;
 }
