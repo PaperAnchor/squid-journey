@@ -78,15 +78,16 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #Sets Sendgrid setup
+  config.action_mailer.default_url_options = { host: 'https://pure-lowlands-44628.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
     ActionMailer::Base.smtp_settings = {
         :user_name => 'SENDGRID_USERNAME',
         :password => 'SENDGRID_PASSWORD',
-        :domain => 'https://pure-lowlands-44628.herokuapp.com',
+        :domain => 'heroku.com',
         :address => 'smtp.sendgrid.net',
         :port => 587,
-        :authentication => :plain,
+        :authentication => :login,
         :enable_starttls_auto => true
     }
 
