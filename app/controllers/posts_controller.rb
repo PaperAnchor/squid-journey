@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
 
     def index
-        @posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 10)
+        @posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 5)
     end
 
     def new
@@ -18,7 +18,6 @@ class PostsController < ApplicationController
         else
             render 'new', notice: "Well, something went wrong. Try again?"
         end
-        @user = User.create( user_params )
     end
 
     def show

@@ -1,13 +1,17 @@
 <div class="container">
     <div class="row">
 
-    <h1 class="page-title">Hey this works!</h1>
+    <h1 class="page-title">Past Blog Posts</h1>
 
-    <% @posts.each do |post| %>
-        <h1><%= link_to post.title, post %></h1>
-        <p><%= post.created_at.strftime("%A, %b, %d")%></p>
-    <% end %>
+    <div class="col-md-8 col-md-offset-2 blog-listing-wrapper">
+        <% @posts.each do |post| %>
+            <div class="blog-listing-item">
+                <h1 class="blog-listing-title"><%= link_to post.title, post %></h1>
+                <p><%= post.created_at.strftime("%A, %b, %d")%></p>
+            </div>
+        <% end %>
 
-    <%= will_paginate @posts %>
+        <%= will_paginate @posts %>
+    </div>
 </div>
 </div>

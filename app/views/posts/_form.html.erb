@@ -1,40 +1,37 @@
 <%= form_for @post, html: { multipart: true } do |f| %>
-<div class="container-fluid">
-    <% if @post.errors.any? %>
-        <h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
-        <ul>
-            <% @post.errors.full_messages each do |msg| %>
-                <li><%= msg %></li>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <% if @post.errors.any? %>
+                <h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
+                <ul>
+                    <% @post.errors.full_messages each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
             <% end %>
-        </ul>
-    <% end %>
-    <div class="row">
-        <div class="col-md-12">
+
             <%= f.label :title %><br>
-            <%= f.text_field :title,  class: "col-md-12 blog-entry-title-field" %>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-12">
+            <%= f.text_field :title,  class: "blog-entry-title-field" %>
+
+            <br>
+            <br>
+
             <%= f.label :content, "Write your next blog post here." %><br>
-            <%= f.text_area :content, class: "col-md-12 blog-entry-content-field" %>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-12">
+            <%= f.text_area :content, class: "blog-entry-content-field" %>
+
+            <br>
+            <br>
+
             <%= f.label :image, "Upload an Image (1200x770)" %><br>
             <%= f.file_field :image %>
+
+            <br>
+            <br>
+
+            <%= f.submit %>
+
+            <% end %>
         </div>
     </div>
-
-    <br>
-    <br>
-
-    <%= f.submit %>
-
-    <% end %>
 </div>
