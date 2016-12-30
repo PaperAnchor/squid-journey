@@ -3,15 +3,35 @@
 
     <h1 class="page-title">Past Blog Posts</h1>
 
-    <div class="col-md-8 col-md-offset-2 blog-listing-wrapper">
-        <% @posts.each do |post| %>
+    <div class="col-md-8 col-md-offset-2">
+        <!--<% @posts.each do |post| %>
             <div class="blog-listing-item">
                 <h1 class="blog-listing-title"><%= link_to post.title, post %></h1>
                 <p><%= post.created_at.strftime("%A, %b, %d")%></p>
             </div>
+        <% end %>-->
+
+        <% @posts.each do |post| %>
+
+            <div class="row blog-listing-wrapper">
+                <div class="col-md-4">
+                    <%= image_tag post.image.url(:med), class: "blog-listing-image" %>
+                </div>
+                <div class="col-md-8">
+                    <h1 class="blog-listing-title"><%= link_to post.title, post %></h1>
+                    <p class="blog-listing-date"><%= post.created_at.strftime("%A, %b, %d")%></p>
+                    <p class="blog-listing-content"><%= truncate post.content, length: 145 %><br>
+                    <%= link_to 'Read More', post, class: 'blog-listing-read-more' %></p>
+                </div>
+            </div>
         <% end %>
 
-        <%= will_paginate @posts %>
+        <div class="row">
+            <div class="col-md-12 blog-listing-pagination">
+                <%= will_paginate @posts %>
+            </div>
+        </div>
+
     </div>
 </div>
 </div>

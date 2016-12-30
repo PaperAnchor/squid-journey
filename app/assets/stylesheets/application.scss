@@ -265,7 +265,13 @@ a.blog-read-more-button {
 }
 
 .blog-listing-wrapper {
-	text-align: center;
+	margin-bottom: 35px;
+}
+
+.blog-listing-image {
+	max-width: 100%;
+	border: 1px solid $light-grey;
+	border-radius: 5px;
 }
 
 .blog-listing-item {
@@ -275,6 +281,10 @@ a.blog-read-more-button {
 	border-bottom: 1px solid $light-grey;
 }
 
+.blog-listing-title {
+	margin: -18px 0 0 0;
+}
+
 .blog-listing-title a {
 	font-size: 24px;
 	color: $dark-blue;
@@ -282,6 +292,25 @@ a.blog-read-more-button {
 
 .blog-listing-title a:hover {
 	text-decoration: none;
+}
+
+.blog-listing-date {
+	color: $highlight;
+	font-size: 1.1em;
+	margin-bottom: 3px;
+}
+
+.blog-listing-content {
+	font-size: 1.3em;
+}
+
+a.blog-listing-read-more {
+	color: $highlight;
+	font-size: 0.9em;
+}
+
+.blog-listing-pagination {
+	text-align: center;
 }
 
 .pagination {
@@ -297,12 +326,12 @@ a.blog-read-more-button {
 		font-style: normal;
 		color: $dark-blue;
 		&:hover {
-			background: $light-blue;
+			background: $highlight;
 			color: white;
 		}
 	}
 	.current {
-		background: $light-blue;
+		background: $highlight;
 		color: white;
 	}
 	.disabled {

@@ -50,7 +50,7 @@
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><%= link_to "Home", root_path, id:"blog-home" %></li>
-                        <li><%= link_to "Blog", root_path(:anchor => "blog"), id:"blog-entries" %></li>
+                        <li><%= link_to "Blog", posts_path, id:"blog-entries" %></li>
                         <li><%= link_to "Contact", root_path(:anchor => "contact"), id:"blog-contact" %></li>
                         <% if user_signed_in? %>
                             <li><%= link_to "Add Blog",  new_post_path %></li>
