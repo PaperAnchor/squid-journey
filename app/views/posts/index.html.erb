@@ -1,21 +1,15 @@
 <div class="container">
     <div class="row">
 
-    <h1 class="page-title">Past Blog Posts</h1>
+    <h1 class="page-title">All Blog Posts</h1>
 
-    <div class="col-md-8 col-md-offset-2">
-        <!--<% @posts.each do |post| %>
-            <div class="blog-listing-item">
-                <h1 class="blog-listing-title"><%= link_to post.title, post %></h1>
-                <p><%= post.created_at.strftime("%A, %b, %d")%></p>
-            </div>
-        <% end %>-->
-
+    <div class="col-md-8 col-md-offset-2 blog-listings-all">
         <% @posts.each do |post| %>
 
             <div class="row blog-listing-wrapper">
                 <div class="col-md-4">
-                    <%= image_tag post.image.url(:med), class: "blog-listing-image" %>
+                    <!--<%= image_tag post.image.url(:med), class: "blog-listing-image" %>-->
+                    <%= link_to image_tag(post.image.url(:med), class: "blog-listing-image"), post %>
                 </div>
                 <div class="col-md-8">
                     <h1 class="blog-listing-title"><%= link_to post.title, post %></h1>

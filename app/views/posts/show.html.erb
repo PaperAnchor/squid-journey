@@ -16,8 +16,7 @@
                 <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @zachmoodie - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter share-icon"></i></a>
                 <!-- Facebook -->
                 <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook share-icon"></i></a>
-                <!-- Google Plus -->
-                <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus share-icon"></i></a>
+                <a target="_blank" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&amp;caption=An%20example%20caption&link=<%= url_for([@post, {only_path: false}]) %>&redirect_uri=https://developers.facebook.com/tools/explorer">Share</a>
             </div>
 
             <% if user_signed_in? %>

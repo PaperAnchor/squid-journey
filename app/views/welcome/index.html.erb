@@ -65,7 +65,13 @@
                         </form>-->
                     </div>
                     <div class="modal-footer">
-                        <%= f.submit "Log in", :class => 'blog-login-submit' %>
+                        <div class="col-md-5">
+                            <%= f.submit "Log in", :class => 'blog-login-submit' %>
+                        </div>
+                        <div class="col-md-7 blog-forgot-password-link">
+                            <%= link_to "Forgot Password", new_user_password_path %>&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+                        </div>
                     </div>
 
                 <% end %>
