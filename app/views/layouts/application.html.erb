@@ -49,7 +49,7 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><%= link_to "Home", root_path(:anchor => "about"), id:"blog-home" %></li>
+                        <li><%= link_to "Home", root_path, id:"blog-home" %></li>
                         <li><%= link_to "Blog", root_path(:anchor => "blog"), id:"blog-entries" %></li>
                         <li><%= link_to "Contact", root_path(:anchor => "contact"), id:"blog-contact" %></li>
                         <% if user_signed_in? %>

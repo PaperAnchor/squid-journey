@@ -7,6 +7,8 @@ $medium-blue: #55a1b1;
 $light-blue: #7fc0d1;
 $lightest-blue: #c4e1e9;
 
+$highlight: #f9368d;
+
 $light-grey: #ccc;
 
 /* ====================== Default Styles ===================== */
@@ -282,8 +284,47 @@ a.blog-read-more-button {
 	text-decoration: none;
 }
 
+.pagination {
+	margin: 2em 0 0 0;
+	a, .previous_page, .current, .next_page {
+		padding: .75em 1em;
+		margin: 0 .5em;
+		border-radius: .15em;
+		line-height: 20px;
+		text-decoration: none;
+		background: white;
+		font-size: .9em;
+		font-style: normal;
+		color: $dark-blue;
+		&:hover {
+			background: $light-blue;
+			color: white;
+		}
+	}
+	.current {
+		background: $light-blue;
+		color: white;
+	}
+	.disabled {
+		color: $light-grey;
+		&:hover {
+			color: $light-grey;
+			background: white;
+		}
+	}
+}
+
 .blog-entry-wrapper {
 	margin-top: 300px;
+}
+
+.blog-entry-wrapper a {
+	font-weight: 600;
+	color: $highlight;
+}
+
+.blog-entry-wrapper a:hover {
+	text-decoration: none;
 }
 
 .blog-entry-title-field {
@@ -325,8 +366,8 @@ a.blog-read-more-button {
 
 #share_box a i {
     font-size: 1.5em;
-	margin: 0 10px;
-	color: $light-blue;
+	margin: 0 15px;
+	color: $highlight;
 	cursor: pointer;
 }
 
@@ -336,13 +377,13 @@ a.blog-read-more-button {
 }
 
 #admin_links {
-	border-top: 1px solid $medium-blue;
-	border-bottom: 1px solid $medium-blue;
+	border-top: 1px solid $light-grey;
+	border-bottom: 1px solid $light-grey;
 	text-align: center;
 	padding: 1em 0;
-	margin: 3em 0;
+	margin: 30px 0;
 	a {
-		color: $medium-blue;
+		color: $dark-blue;
 		margin: 0 1em;
 		font-weight: 300;
 		font-size: 1.1em;
@@ -523,4 +564,37 @@ footer {
 
 #disqus_thread {
 	margin-top: 25px;
+}
+
+/* ====================== Alternate Login Page Styles ===================== */
+
+.blog-login-field {
+	width: 100%;
+	height: 30px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid $highlight;
+	margin-bottom: 15px;
+}
+
+.blog-login-remember {
+	margin-bottom: 10px;
+}
+
+.blog-login-button {
+	width: 30%;
+	height: 30px;
+	border-radius: 5px;
+	color: white;
+	background: $highlight;
+	border: 1px solid $highlight;
+}
+
+.login-form a {
+	margin-top: 10px;
+	color: $highlight;
+}
+
+.login-form a:hover {
+	text-decoration: none;
 }
